@@ -88,77 +88,84 @@ header {
     background: rgba(255,255,255,0.1);
 }
 
-/* --- STYLE DU MENU PRINCIPAL --- */
-nav .main-menu {
+/* --- NAVIGATION PRINCIPALE --- */
+nav {
+    /* On s'assure que le menu ne dépasse pas */
+    position: relative;
+    z-index: 10;
+}
+
+/* Le bandeau horizontal (Menu principal) */
+.main-menu {
     display: flex;
     list-style: none;
-    border: 2px solid #dcbfa6; /* Bordure beige clair */
-    background-color: rgba(140, 59, 43, 0.9); /* Fond légèrement transparent */
-    border-radius: 12px; /* Coins arrondis du menu principal */
+    background-color: rgba(140, 59, 43, 0.9); /* Fond rouge brique */
+    border: 2px solid #dcbfa6; /* Bordure beige */
+    border-radius: 8px; /* Coins arrondis */
     padding: 0;
     margin: 0;
-    position: relative; /* Important pour le positionnement */
 }
 
-nav .main-menu > li {
-    position: relative; /* Pour attacher le sous-menu */
+/* Les éléments du menu principal (li) */
+.main-menu > li {
+    position: relative; /* Important pour que le sous-menu s'accroche ici */
 }
 
-nav .main-menu > li > a {
+/* Les liens du menu principal (a) */
+.main-menu > li > a {
     display: block;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
     color: #fff;
     font-size: 1rem;
-    border-right: 1px solid rgba(220, 191, 166, 0.3); /* Séparateur discret */
-    transition: background 0.3s, color 0.3s;
+    text-align: center;
+    border-right: 1px solid rgba(220, 191, 166, 0.3); /* Séparateur vertical */
+    transition: background 0.3s;
+    text-decoration: none;
 }
 
-nav .main-menu > li:last-child > a {
+/* Enlever la bordure à droite du dernier élément */
+.main-menu > li:last-child > a {
     border-right: none;
 }
 
-/* Hover sur le menu principal */
-nav .main-menu > li > a:hover,
-nav .main-menu > li > a.active {
-    background-color: #dcbfa6; /* Le beige au survol */
-    color: #8c3b2b; /* Texte rouge brique */
-    border-radius: 8px; /* Petit arrondi au survol */
+/* Effet au survol du menu principal */
+.main-menu > li > a:hover,
+.main-menu > li > a.active {
+    background-color: #dcbfa6;
+    color: #8c3b2b;
 }
 
-/* --- STYLE DU SOUS-MENU (DROPDOWN) --- */
+/* --- SOUS-MENU (DROPDOWN) --- */
 .dropdown {
     display: none; /* Caché par défaut */
-    position: absolute;
-    top: 110%; /* Juste en dessous du menu */
-    left: 50%;
-    transform: translateX(-50%); /* Centré par rapport à "Gallery" */
-    background-color: #8c3b2b; /* Fond rouge brique */
-    border: 2px solid #dcbfa6; /* Bordure beige */
-    border-radius: 12px;
+    position: absolute; /* Sort du flux normal */
+    top: 100%; /* Se place juste en dessous */
+    left: 0;
+    background-color: #8c3b2b; /* Fond rouge */
+    border: 2px solid #dcbfa6;
+    border-top: none; /* Collé au menu du haut */
+    border-radius: 0 0 8px 8px;
     list-style: none;
-    padding: 0.5rem 0;
-    width: 220px; /* Largeur du sous-menu */
+    min-width: 200px; /* Largeur minimale */
+    padding: 0;
+    margin: 0;
     z-index: 100;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Afficher le sous-menu au survol de "Gallery" */
+/* Afficher le sous-menu quand on passe la souris sur le parent (.has-dropdown) */
 .has-dropdown:hover .dropdown {
     display: block;
-    animation: fadeIn 0.3s ease;
 }
 
-.dropdown li {
-    width: 100%;
-}
-
+/* Les liens du sous-menu */
 .dropdown li a {
     display: block;
     padding: 0.8rem 1rem;
     color: #fff;
-    text-align: center;
-    font-size: 0.95rem;
-    border-bottom: 1px solid rgba(220, 191, 166, 0.2); /* Lignes de séparation */
+    text-decoration: none;
+    border-bottom: 1px solid rgba(220, 191, 166, 0.2);
+    font-size: 0.9rem;
+    text-align: left;
     transition: background 0.2s;
 }
 
@@ -167,7 +174,7 @@ nav .main-menu > li > a.active {
 }
 
 .dropdown li a:hover {
-    background-color: rgba(220, 191, 166, 0.1);
+    background-color: rgba(220, 191, 166, 0.2);
     color: #dcbfa6;
 }
 
