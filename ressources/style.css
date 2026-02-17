@@ -88,31 +88,93 @@ header {
     background: rgba(255,255,255,0.1);
 }
 
-nav ul {
+/* --- STYLE DU MENU PRINCIPAL --- */
+nav .main-menu {
     display: flex;
     list-style: none;
-    border: 1px solid #a65e52;
-    border-radius: 5px;
-    overflow: hidden;
+    border: 2px solid #dcbfa6; /* Bordure beige clair */
+    background-color: rgba(140, 59, 43, 0.9); /* Fond légèrement transparent */
+    border-radius: 12px; /* Coins arrondis du menu principal */
+    padding: 0;
+    margin: 0;
+    position: relative; /* Important pour le positionnement */
 }
 
-nav ul li a {
+nav .main-menu > li {
+    position: relative; /* Pour attacher le sous-menu */
+}
+
+nav .main-menu > li > a {
     display: block;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    background-color: transparent;
-    transition: background 0.3s;
-    border-right: 1px solid #a65e52;
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    border-right: 1px solid rgba(220, 191, 166, 0.3); /* Séparateur discret */
+    transition: background 0.3s, color 0.3s;
 }
 
-nav ul li:last-child a {
+nav .main-menu > li:last-child > a {
     border-right: none;
 }
 
-nav ul li a.active, nav ul li a:hover {
-    background-color: #dcbfa6;
-    color: var(--primary-color);
-    font-weight: 600;
+/* Hover sur le menu principal */
+nav .main-menu > li > a:hover,
+nav .main-menu > li > a.active {
+    background-color: #dcbfa6; /* Le beige au survol */
+    color: #8c3b2b; /* Texte rouge brique */
+    border-radius: 8px; /* Petit arrondi au survol */
+}
+
+/* --- STYLE DU SOUS-MENU (DROPDOWN) --- */
+.dropdown {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 110%; /* Juste en dessous du menu */
+    left: 50%;
+    transform: translateX(-50%); /* Centré par rapport à "Gallery" */
+    background-color: #8c3b2b; /* Fond rouge brique */
+    border: 2px solid #dcbfa6; /* Bordure beige */
+    border-radius: 12px;
+    list-style: none;
+    padding: 0.5rem 0;
+    width: 220px; /* Largeur du sous-menu */
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Afficher le sous-menu au survol de "Gallery" */
+.has-dropdown:hover .dropdown {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(220, 191, 166, 0.2); /* Lignes de séparation */
+    transition: background 0.2s;
+}
+
+.dropdown li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(220, 191, 166, 0.1);
+    color: #dcbfa6;
+}
+
+/* Petite animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 .star-icon {
@@ -133,11 +195,16 @@ nav ul li a.active, nav ul li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* IMPORTANT : Remplace 'ton-image.jpg' par le nom de ton fichier image */
-    background-image: url('back.avif'); 
-    background-size: cover;
-    background-position: center;
-    background-color: var(--accent-color); /* Couleur de repli si pas d'image */
+    
+    /* LA MAGIE EST ICI : */
+    background-color: #c48b78; /* La couleur rose/terre cuite de fond */
+    background-image: url('back.avif'); /* Ton image blanche */
+    background-size: cover;     /* L'image couvre tout */
+    background-position: center bottom; /* Centre l'image, alignée en bas */
+    background-repeat: no-repeat;
+    
+    /* Cette ligne fait fusionner la couleur et l'image */
+    background-blend-mode: multiply; 
 }
 
 /* Ajoute un filtre sombre ou coloré par-dessus l'image si besoin pour la lisibilité */
