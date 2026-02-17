@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucille Pernaud - Portfolio</title>
+    <title>Lucille Pernaud - Animation</title>
     <link rel="stylesheet" href="ressources/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,15 +48,53 @@
         </div>
     </header>
 
-    <main class="hero">
-        <div class="hero-content">
-            <div class="title-decoration">
-                <i class="fa-solid fa-star star-left"></i>
-                <h2>WELCOME<br>TO MY PORTFOLIO</h2>
-                <i class="fa-solid fa-star star-right"></i>
+    <div class="category-nav-container">
+        <ul class="category-nav">
+            <li><a href="animation.html" class="current">Animation</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Illustration</a></li>
+            <li><a href="#">Traditional techniques</a></li>
+            <li><a href="#">Storytelling</a></li>
+        </ul>
+    </div>
+
+    <main class="gallery-page">
+        
+        <section class="video-grid-section">
+            <div class="video-grid">
+                
+                <div class="video-tile">
+                    <video controls poster="assets/poster1.jpg">
+                        <source src="assets/anim1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+
+                <div class="video-tile">
+                    <video controls>
+                        <source src="assets/anim2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video-tile">
+                    <video controls>
+                        <source src="assets/anim3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video-tile">
+                    <video controls><source src="assets/anim4.mp4" type="video/mp4"></video>
+                </div>
+                <div class="video-tile">
+                    <video controls><source src="assets/anim5.mp4" type="video/mp4"></video>
+                </div>
+                <div class="video-tile">
+                    <video controls><source src="assets/anim6.mp4" type="video/mp4"></video>
+                </div>
+
             </div>
-            <a href="#" class="cta-button">Click to visit</a>
-        </div>
+        </section>
+
     </main>
 
     <footer>

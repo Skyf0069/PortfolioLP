@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucille Pernaud - Portfolio</title>
+    <title>Lucille Pernaud - Gallery</title>
     <link rel="stylesheet" href="ressources/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,15 +48,45 @@
         </div>
     </header>
 
-    <main class="hero">
-        <div class="hero-content">
+    <main class="gallery-page">
+        
+        <section class="demoreel-section">
             <div class="title-decoration">
                 <i class="fa-solid fa-star star-left"></i>
-                <h2>WELCOME<br>TO MY PORTFOLIO</h2>
+                <h2>MY DEMOREEL</h2>
                 <i class="fa-solid fa-star star-right"></i>
             </div>
-            <a href="#" class="cta-button">Click to visit</a>
-        </div>
+
+            <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID" title="Demoreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p class="credits">MUSIC CREDITS: SONICAN, BACKGROUND MUSIC NEW AGE NATURE</p>
+        </section>
+
+        <section class="masonry-grid">
+            
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Dessin 1">
+            </div>
+
+            <div class="gallery-item">
+                <video controls poster="poster2.jpg">
+                    <source src="video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Dessin vertical">
+            </div>
+
+            <div class="gallery-item"><img src="image4.jpg" alt="Art"></div>
+            <div class="gallery-item"><img src="image5.jpg" alt="Art"></div>
+            <div class="gallery-item"><img src="image6.jpg" alt="Art"></div>
+            
+        </section>
+
     </main>
 
     <footer>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucille Pernaud - About Me</title>
+    <link rel="stylesheet" href="ressources/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="ressources/logo.avif" alt="Logo de Lucille Pernaud" class="logo" width="50" height="50">
+            <div class="identity">
+                <h1>LUCILLE PERNAUD</h1>
+                <p>Student in 2D/3D animation, Writer, Director, Musician</p>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="ressources/CV - PERNAUD Lucille.pdf" class="cv-btn">CV <i class="fa-solid fa-circle-down"></i></a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html" class="active">Homepage</a></li>
+                    
+                    <li class="has-dropdown">
+                        <a href="gallery.html">Gallery</a>
+                        <ul class="dropdown">
+                            <li><a href="animation.html">Animation</a></li>
+                            <li><a href="shorts.html">Shorts</a></li>
+                            <li><a href="illustration.html">Illustration</a></li>
+                            <li><a href="traditional.html">Traditional techniques</a></li>
+                            <li><a href="storytelling.html">Storytelling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="star-icon">
+                <i class="fa-solid fa-star-of-life"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-page">
+        
+        <section class="intro-section">
+            <div class="bio-container">
+                <div class="bio-box">
+                    <h2>Hi there !</h2>
+                    <p class="subtitle">My name is Lucille, but you can also call me Lushifer,</p>
+                    <p>I am a french artist whos' passionate about cinema, music and writing stories. I'm currently in 1st year of DN MADe animation in valence.</p>
+                </div>
+                <div class="triangle-pointer"></div>
+            </div>
+
+            <div class="portrait-container">
+                <div class="portrait-circle">
+                    <img src="assets/lucille-portrait.jpg" alt="Lucille Portrait">
+                </div>
+                <i class="fa-solid fa-star star-deco s1"></i>
+                <i class="fa-solid fa-star star-deco s2"></i>
+                <i class="fa-solid fa-star star-deco s3"></i>
+            </div>
+        </section>
+
+        <div class="section-separator"><i class="fa-solid fa-star-of-life"></i></div>
+
+        <section class="moodboard-section">
+            <h2 class="section-title">About me</h2>
+            
+            <div class="moodboard-content">
+                <div class="moodboard-grid">
+                    <img src="assets/mood1.jpg" alt="Mood" class="tall">
+                    <img src="assets/mood2.jpg" alt="Mood">
+                    <img src="assets/mood3.jpg" alt="Mood">
+                    <img src="assets/mood4.jpg" alt="Mood" class="wide">
+                    <img src="assets/mood5.jpg" alt="Mood">
+                    <img src="assets/mood6.jpg" alt="Mood" class="tall">
+                    <img src="assets/mood7.jpg" alt="Mood">
+                </div>
+
+                <div class="moodboard-text">
+                    <p>I inspire myself from a large variety of films, musics and artists.</p>
+                    <p>From the world of mangas to the lands of tolkien, fantasy and psychologic themes are the main subjects that keep my attention. Furthermore, I'm also passionate about mythologies and tales that i think, are shaping societies.</p>
+                    <p>I am convinced that telling stories is the way that humans choose to express themselves, teach, learn, and imagine other ways of seeing life (as well as other ways of living, and how to improve society).</p>
+                    <p>Dystopia and science fiction are one of my favorite genres, because they aim to prevent society by showing it what not to do.</p>
+                    <p>I'm sure that to find what we think we need, we must know what we don't need first, right ?</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Here's a moodboard to help you visualize the kind of artworks and artists that inspire me.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"><i class="fa-solid fa-star-of-life"></i></div>
+
+        <section class="artists-section">
+            <h2 class="section-title">Artists that inspire me</h2>
+
+            <div class="artist-carousel-wrapper">
+                <button class="nav-arrow prev-artist" onclick="scrollArtists(-1)">&#10094;</button>
+
+                <div class="artist-track" id="artistTrack">
+                    
+                    <div class="artist-bubble" onclick="openArtistModal(this)"
+                         data-name="Tomm Moore"
+                         data-role="Illustrator, Animator"
+                         data-img="assets/artist-tomm.jpg">
+                         <img src="assets/artist-tomm.jpg" alt="Tomm Moore">
+                    </div>
+
+                    <div class="artist-bubble" onclick="openArtistModal(this)"
+                         data-name="Artist Name"
+                         data-role="Painter"
+                         data-img="assets/artist2.jpg">
+                         <img src="assets/artist2.jpg" alt="Artist 2">
+                    </div>
+
+                    <div class="artist-bubble" onclick="openArtistModal(this)"
+                         data-name="Artist Name"
+                         data-role="Director"
+                         data-img="assets/artist3.jpg">
+                         <img src="assets/artist3.jpg" alt="Artist 3">
+                    </div>
+
+                     <div class="artist-bubble" onclick="openArtistModal(this)"
+                     data-name="Artist Name"
+                     data-role="Director"
+                     data-img="assets/artist4.jpg">
+                     <img src="assets/artist4.jpg" alt="Artist 4">
+                    </div>
+
+                    <div class="artist-bubble" onclick="openArtistModal(this)"
+                    data-name="Artist Name"
+                    data-role="Director"
+                    data-img="assets/artist5.jpg">
+                    <img src="assets/artist5.jpg" alt="Artist 5">
+                   </div>
+
+                </div>
+
+                <button class="nav-arrow next-artist" onclick="scrollArtists(1)">&#10095;</button>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="artistModal" class="artist-modal">
+        <span class="close-artist" onclick="closeArtistModal()">&times;</span>
+        <div class="artist-modal-content">
+            <img id="artistModalImg" src="" alt="Artist">
+            <h3 id="artistModalName">Name</h3>
+            <p id="artistModalRole">Role</p>
+        </div>
+        
+        <a class="prev-modal-nav" onclick="changeArtistSlide(-1)">&#10094;</a>
+        <a class="next-modal-nav" onclick="changeArtistSlide(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://cara.app/mollydaiwolf">Cara</a>
+                <a href="https://www.facebook.com/profile.php?id=61578014297071">Facebook</a>
+                <a href="https://www.instagram.com/lushi_per/">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCLyJn1T6x2TgNs3_Pf6fgcA">Youtube</a>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:lucille.pernaud@outlook.com">lucille.pernaud@outlook.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+33620158008">06 20 15 80 08</a>
+                </div>
+            </div>
+            
+            <a href="#" class="back-to-top">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2026 Lucille Pernaud. Boosté par <a href="https://skynium.fr">Skynium</a>. Hébergé en Europe.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. CAROUSEL SCROLL ---
+        function scrollArtists(direction) {
+            const track = document.getElementById('artistTrack');
+            const scrollAmount = 300; 
+            track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // --- 2. MODAL ARTISTE ---
+        const artistModal = document.getElementById('artistModal');
+        const aImg = document.getElementById('artistModalImg');
+        const aName = document.getElementById('artistModalName');
+        const aRole = document.getElementById('artistModalRole');
+        const artistBubbles = document.querySelectorAll('.artist-bubble');
+        let currentArtistIndex = 0;
+
+        function openArtistModal(element) {
+            currentArtistIndex = Array.from(artistBubbles).indexOf(element);
+            updateArtistModal();
+            artistModal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Bloque le scroll
+        }
+
+        function closeArtistModal() {
+            artistModal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function updateArtistModal() {
+            const el = artistBubbles[currentArtistIndex];
+            aImg.src = el.getAttribute('data-img');
+            aName.innerText = el.getAttribute('data-name');
+            aRole.innerText = el.getAttribute('data-role');
+        }
+
+        function changeArtistSlide(direction) {
+            currentArtistIndex += direction;
+            if (currentArtistIndex >= artistBubbles.length) currentArtistIndex = 0;
+            if (currentArtistIndex < 0) currentArtistIndex = artistBubbles.length - 1;
+            updateArtistModal();
+        }
+
+        window.onclick = function(event) {
+            if (event.target == artistModal) closeArtistModal();
+        }
+    </script>
+</body>
+</html>

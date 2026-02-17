@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucille Pernaud - Storytelling</title>
+    <link rel="stylesheet" href="ressources/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="ressources/logo.avif" alt="Logo de Lucille Pernaud" class="logo" width="50" height="50">
+            <div class="identity">
+                <h1>LUCILLE PERNAUD</h1>
+                <p>Student in 2D/3D animation, Writer, Director, Musician</p>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="ressources/CV - PERNAUD Lucille.pdf" class="cv-btn">CV <i class="fa-solid fa-circle-down"></i></a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html" class="active">Homepage</a></li>
+                    
+                    <li class="has-dropdown">
+                        <a href="gallery.html">Gallery</a>
+                        <ul class="dropdown">
+                            <li><a href="animation.html">Animation</a></li>
+                            <li><a href="shorts.html">Shorts</a></li>
+                            <li><a href="illustration.html">Illustration</a></li>
+                            <li><a href="traditional.html">Traditional techniques</a></li>
+                            <li><a href="storytelling.html">Storytelling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="star-icon">
+                <i class="fa-solid fa-star-of-life"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-nav-container">
+        <ul class="category-nav">
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="shorts.html">Shorts</a></li>
+            <li><a href="illustration.html">Illustration</a></li>
+            <li><a href="traditional.html">Traditional techniques</a></li>
+            <li><a href="storytelling.html" class="current">Storytelling</a></li>
+        </ul>
+    </div>
+
+    <main class="gallery-page storytelling-page">
+        
+        <div class="story-title">
+            <i class="fa-solid fa-star-of-life"></i>
+            <h2>PHANTOM BOY - STORYBOARD</h2>
+            <i class="fa-solid fa-star-of-life"></i>
+        </div>
+
+        <div class="storyboard-wrapper">
+            <button class="nav-arrow prev-story" onclick="scrollStoryboard(-1)">&#10094;</button>
+
+            <div class="storyboard-track" id="storyTrack">
+                
+                <div class="story-item illu-item" onclick="openModal(this)"
+                     data-img="assets/story1.jpg"
+                     data-title="Phantom Boy - Page 1/4"
+                     data-description="Séquence d'ouverture. Recherche de cadrage et dynamique du mouvement.">
+                    <img src="assets/story1.jpg" alt="Storyboard Page 1">
+                </div>
+
+                <div class="story-item illu-item" onclick="openModal(this)"
+                     data-img="assets/story2.jpg"
+                     data-title="Phantom Boy - Page 2/4"
+                     data-description="Suite de la séquence. Zoom sur le personnage principal.">
+                    <img src="assets/story2.jpg" alt="Storyboard Page 2">
+                </div>
+
+                <div class="story-item illu-item" onclick="openModal(this)"
+                     data-img="assets/story3.jpg"
+                     data-title="Phantom Boy - Page 3/4"
+                     data-description="Plan large et intégration des décors urbains.">
+                    <img src="assets/story3.jpg" alt="Storyboard Page 3">
+                </div>
+
+                <div class="story-item illu-item" onclick="openModal(this)"
+                     data-img="assets/story4.jpg"
+                     data-title="Phantom Boy - Page 4/4"
+                     data-description="Conclusion de la séquence.">
+                    <img src="assets/story4.jpg" alt="Storyboard Page 4">
+                </div>
+
+                <div class="story-item illu-item" onclick="openModal(this)"
+                     data-img="assets/story1.jpg"
+                     data-title="Extra Page"
+                     data-description="Description...">
+                    <img src="assets/story1.jpg" alt="Storyboard Extra">
+                </div>
+
+            </div>
+
+            <button class="nav-arrow next-story" onclick="scrollStoryboard(1)">&#10095;</button>
+        </div>
+
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-right">
+                <h2 id="modalTitle">Titre</h2>
+                <p id="modalDesc">Description...</p>
+            </div>
+        </div>
+        <a class="prev" onclick="changeLightboxSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeLightboxSlide(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://cara.app/mollydaiwolf">Cara</a>
+                <a href="https://www.facebook.com/profile.php?id=61578014297071">Facebook</a>
+                <a href="https://www.instagram.com/lushi_per/">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCLyJn1T6x2TgNs3_Pf6fgcA">Youtube</a>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:lucille.pernaud@outlook.com">lucille.pernaud@outlook.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+33620158008">06 20 15 80 08</a>
+                </div>
+            </div>
+            
+            <a href="#" class="back-to-top">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2026 Lucille Pernaud. Boosté par <a href="https://skynium.fr">Skynium</a>. Hébergé en Europe.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. SCRIPT DEFILEMENT HORIZONTAL (CARROUSEL) ---
+        function scrollStoryboard(direction) {
+            const track = document.getElementById('storyTrack');
+            // On défile de 300px vers la gauche ou la droite
+            const scrollAmount = 300; 
+            track.scrollBy({
+                top: 0,
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // --- 2. SCRIPT LIGHTBOX (Le même que les autres pages) ---
+        let currentItemIndex = 0;
+        // Note: on sélectionne uniquement les éléments qui ont la classe "illu-item"
+        const items = document.querySelectorAll('.illu-item');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+
+        function openModal(element) {
+            currentItemIndex = Array.from(items).indexOf(element);
+            updateModalContent();
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function updateModalContent() {
+            const item = items[currentItemIndex];
+            modalImg.src = item.getAttribute('data-img');
+            modalTitle.innerText = item.getAttribute('data-title');
+            modalDesc.innerText = item.getAttribute('data-description');
+        }
+
+        function changeLightboxSlide(direction) {
+            currentItemIndex += direction;
+            if (currentItemIndex >= items.length) currentItemIndex = 0;
+            if (currentItemIndex < 0) currentItemIndex = items.length - 1;
+            updateModalContent();
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) closeModal();
+        }
+    </script>
+
+</body>
+</html>

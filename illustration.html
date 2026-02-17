@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucille Pernaud - Illustration</title>
+    <link rel="stylesheet" href="ressources/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="ressources/logo.avif" alt="Logo de Lucille Pernaud" class="logo" width="50" height="50">
+            <div class="identity">
+                <h1>LUCILLE PERNAUD</h1>
+                <p>Student in 2D/3D animation, Writer, Director, Musician</p>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="ressources/CV - PERNAUD Lucille.pdf" class="cv-btn">CV <i class="fa-solid fa-circle-down"></i></a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html" class="active">Homepage</a></li>
+                    
+                    <li class="has-dropdown">
+                        <a href="gallery.html">Gallery</a>
+                        <ul class="dropdown">
+                            <li><a href="animation.html">Animation</a></li>
+                            <li><a href="shorts.html">Shorts</a></li>
+                            <li><a href="illustration.html">Illustration</a></li>
+                            <li><a href="traditional.html">Traditional techniques</a></li>
+                            <li><a href="storytelling.html">Storytelling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="star-icon">
+                <i class="fa-solid fa-star-of-life"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-nav-container">
+        <ul class="category-nav">
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="shorts.html">Shorts</a></li>
+            <li><a href="illustration.html" class="current">Illustration</a></li>
+            <li><a href="#">Traditional techniques</a></li>
+            <li><a href="#">Storytelling</a></li>
+        </ul>
+    </div>
+
+    <main class="gallery-page">
+        <section class="illustration-grid-section">
+            
+            <div class="illustration-grid">
+
+                <div class="illu-item" onclick="openModal(this)" 
+                     data-img="assets/illu1.jpg" 
+                     data-title="Blue version of the writer's tools (2025)" 
+                     data-description="'Usefull' project is an event that we planned for September 2025. The ISTM Montplaisir where we study was giving a soirée for students and business partners. We've been requested to create cards that could be sold that day. The goal was to imagine a character who's job could be considered 'usefull'. I decided to pick the writer.">
+                    
+                    <div class="img-container">
+                        <img src="assets/illu1.jpg" alt="Blue Writer Tools">
+                        <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="illu-info">
+                        <h3>Blue version of the writer's tools (2025)</h3>
+                        <p>"Usefull" project is an event that we planned for September 2025...</p>
+                    </div>
+                </div>
+
+                <div class="illu-item" onclick="openModal(this)"
+                     data-img="assets/illu2.jpg"
+                     data-title="Red version of the writer's tools (2025)"
+                     data-description="This is the red variation of the writer's tool set. We explored different color palettes to convey different emotions. Red signifies passion and intensity suitable for a dramatic writer.">
+                    
+                    <div class="img-container">
+                        <img src="assets/illu2.jpg" alt="Red Writer Tools">
+                        <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="illu-info">
+                        <h3>Red version of the writer's tools (2025)</h3>
+                        <p>"Usefull" project is an event that we planned for September 2025...</p>
+                    </div>
+                </div>
+
+                <div class="illu-item" onclick="openModal(this)"
+                     data-img="assets/illu3.jpg"
+                     data-title="Collum, the writer (2025)"
+                     data-description="Character design for Collum. We first drew them on paper, then scanned them and edited them on Photoshop. Finally designed some tools or our character into a form that we could print on pins.">
+                    
+                    <div class="img-container">
+                        <img src="assets/illu3.jpg" alt="Collum Character">
+                        <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="illu-info">
+                        <h3>Collum, the writer (2025)</h3>
+                        <p>"Usefull" project is an event that we planned for September 2025...</p>
+                    </div>
+                </div>
+
+                <div class="illu-item" onclick="openModal(this)"
+                     data-img="assets/illu4.jpg"
+                     data-title="Radio Star (2025)"
+                     data-description="A detailed study of the radio object used in the main composition.">
+                    <div class="img-container">
+                        <img src="assets/illu4.jpg" alt="Radio Star">
+                        <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="illu-info">
+                        <h3>Radio Star (2025)</h3>
+                        <p>"Usefull" project is an event that we planned for September 2025...</p>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-content">
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-right">
+                <h2 id="modalTitle">Titre</h2>
+                <p id="modalDesc">Description...</p>
+            </div>
+        </div>
+        
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://cara.app/mollydaiwolf">Cara</a>
+                <a href="https://www.facebook.com/profile.php?id=61578014297071">Facebook</a>
+                <a href="https://www.instagram.com/lushi_per/">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCLyJn1T6x2TgNs3_Pf6fgcA">Youtube</a>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:lucille.pernaud@outlook.com">lucille.pernaud@outlook.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+33620158008">06 20 15 80 08</a>
+                </div>
+            </div>
+            
+            <a href="#" class="back-to-top">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2026 Lucille Pernaud. Boosté par <a href="https://skynium.fr">Skynium</a>. Hébergé en Europe.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Variables globales
+        let currentItemIndex = 0;
+        const items = document.querySelectorAll('.illu-item');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+
+        // Fonction pour ouvrir la modale
+        function openModal(element) {
+            // Trouver l'index de l'élément cliqué
+            currentItemIndex = Array.from(items).indexOf(element);
+            updateModalContent();
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Empêche le scroll derrière
+        }
+
+        // Fonction pour fermer la modale
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Réactive le scroll
+        }
+
+        // Mettre à jour le contenu (Image + Texte)
+        function updateModalContent() {
+            const item = items[currentItemIndex];
+            modalImg.src = item.getAttribute('data-img');
+            modalTitle.innerText = item.getAttribute('data-title');
+            modalDesc.innerText = item.getAttribute('data-description');
+        }
+
+        // Changer d'image (Suivant / Précédent)
+        function changeSlide(direction) {
+            currentItemIndex += direction;
+            // Boucle infinie (si on arrive à la fin, on retourne au début)
+            if (currentItemIndex >= items.length) currentItemIndex = 0;
+            if (currentItemIndex < 0) currentItemIndex = items.length - 1;
+            updateModalContent();
+        }
+
+        // Fermer si on clique en dehors de l'image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
